@@ -30,22 +30,26 @@ end
 
 
 
+
+
 def convert_to_cipher(text, keycode)
 
     if keycode > 26
       key = keycode % 26  
     else
-      keycode = key
+      key = keycode
     end
+
+
 
     ciphered = text.split("").map do |char|
 
       if char =~ /\W/
         char = char               
       elsif char === char.upcase then
-        char = (char.to_i26 + key).to_s26.upcase
+        char = ((char.to_i26) + key).to_s26.upcase
       else 
-        char = (char.to_i26 + key).to_s26
+        char = ((char.to_i26) + key).to_s26
       end
     end
     
@@ -66,12 +70,9 @@ ciphered_phrase = convert_to_cipher(words_to_convert, cipher_key_code)
 
 puts "Your Caesar's Cipher is: #{ciphered_phrase}"
 
-t
 
 
 
 
 
 
-
-      
